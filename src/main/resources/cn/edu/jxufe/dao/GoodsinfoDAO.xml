@@ -281,4 +281,7 @@
       create_time = #{createTime,jdbcType=TIMESTAMP}
     where goods_id = #{goodsId,jdbcType=INTEGER}
   </update>
+  <select id="findAllGoodsinfo" resultMap="BaseResultMap">
+    SELECT * FROM goodsinfo
+  </select>
 </mapper>

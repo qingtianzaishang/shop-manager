@@ -26,6 +26,7 @@
       url:"advertisementdata",
       width:"100%",
       pagination:true,
+      fit:true,
       title:"广告列表",
       toolbar: [{
         iconCls: 'icon-add',
