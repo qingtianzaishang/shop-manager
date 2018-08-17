@@ -284,4 +284,12 @@
   <select id="findAllGoodsinfo" resultMap="BaseResultMap">
     SELECT * FROM goodsinfo
   </select>
+  <select id="findAdvertisementByProperty" resultMap="BaseResultMap">
+    SELECT * FROM goodsinfo WHERE ${propertyName} like  Concat('%',#{propertyValue},'%')
+  </select>
+
+  <select id="findAdvertisementByTime" resultMap="BaseResultMap">
+    SELECT * FROM goodsinfo WHERE create_time>=#{startTime} AND #{endTime}>=create_time
+  </select>
+
 </mapper>

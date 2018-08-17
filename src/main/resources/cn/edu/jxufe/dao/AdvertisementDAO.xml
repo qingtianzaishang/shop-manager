@@ -129,4 +129,13 @@
   <select id="findAllAdvertisement" resultMap="BaseResultMap">
     SELECT * FROM advertisement
   </select>
+
+  <select id="findAdvertisementByProperty" resultMap="BaseResultMap">
+    SELECT * FROM advertisement WHERE ${propertyName} like  Concat('%',#{propertyValue},'%')
+  </select>
+
+  <select id="findAdvertisementByTime" resultMap="BaseResultMap">
+    SELECT * FROM advertisement WHERE adv_cratetime>=#{startTime} AND #{endTime}>=adv_cratetime
+  </select>
+
 </mapper>

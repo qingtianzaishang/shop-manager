@@ -185,4 +185,7 @@
       updated_time = #{updatedTime,jdbcType=TIMESTAMP}
     where order_id = #{orderId,jdbcType=INTEGER}
   </update>
+  <select id="findAllOrderinfo" resultMap="BaseResultMap">
+    SELECT * FROM orderinfo
+  </select>
 </mapper>
